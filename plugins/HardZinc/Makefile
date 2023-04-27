@@ -26,6 +26,6 @@ LINK_FLAGS      += -pthread
 # --------------------------------------------------------------
 # Enable all possible plugin types
 
-all: clap dssi_dsp lv2_dsp vst2 vst3
+all: clap ladspa lv2_dsp vst2 vst3
 
 # --------------------------------------------------------------
