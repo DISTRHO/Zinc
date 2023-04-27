@@ -165,7 +165,7 @@ private:
         {
             const MutexLocker cml(recvlock);
 
-            if (filled < frames)
+            if (filled < frames * 2)
             {
                 std::memset(buf1, 0, sizeof(float) * frames);
                 std::memset(buf2, 0, sizeof(float) * frames);
@@ -175,10 +175,10 @@ private:
                 std::memcpy(buf1, recv1, sizeof(float) * frames);
                 std::memcpy(buf2, recv2, sizeof(float) * frames);
 
-                std::memmove(recv1, recv1 + frames, sizeof(float) * frames);
-                std::memmove(recv2, recv1 + frames, sizeof(float) * frames);
-
                 filled -= frames;
+
+                std::memmove(recv1, recv1 + frames, sizeof(float) * filled);
+                std::memmove(recv2, recv2 + frames, sizeof(float) * filled);
             }
         }
     }
