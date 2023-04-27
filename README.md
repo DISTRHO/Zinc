@@ -1,6 +1,6 @@
 # DISTRHO Zinc
 
-An utility plugin for getting sound out of plugin hosts into JACK.
+An utility plugin for getting sound out of plugin hosts into [JACK](https://jackaudio.org/).
 
 There are 2 variants - Soft Zinc and Hard Zinc.  
 Both variants create a JACK client where audio from the host is played through.
@@ -30,3 +30,10 @@ Under normal circunstances it shouldn't add any extra latency or DSP load.
 
 One use-case is using OBS audio capture through JACK.  
 Placing the plugin on the "Filters" for this audio capture stream allows to get the sound out of OBS without any extra latency.
+
+## Screenshot
+
+There is nothing to show plugin-wise, it has no GUI or controls.  
+But to give an example of use-case, here it is being used for OBS: (canvas rendered by [Carla](https://kx.studio/Applications:Carla))
+
+![Example-Screenshot](Example-Screenshot.png)
