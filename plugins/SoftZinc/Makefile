@@ -20,6 +20,9 @@ FILES_DSP = \
 
 include ../../dpf/Makefile.plugins.mk
 
+BUILD_CXX_FLAGS += -pthread
+LINK_FLAGS      += -pthread
+
 # --------------------------------------------------------------
 # Enable all possible plugin types
 
